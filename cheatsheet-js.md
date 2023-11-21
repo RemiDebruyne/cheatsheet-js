@@ -12,9 +12,9 @@
 - Declare an object :
 ``` js
 let objectName = {
-    key: value;
-    key: value;
-    "multiple words key": value; //key with multiple words have to be declared in strings
+    key: value,
+    key: value,
+    "multiple words key": value, //key with multiple words have to be declared in strings
     key, // is equal to key : key if the key and value have the same name
     key,
 }
