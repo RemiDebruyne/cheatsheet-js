@@ -92,7 +92,18 @@
 
 ## Methods
 ### This
-
+ - `this` when used in an object method, `this` refers to the `object` it is used in
+  
+  ```js
+    const person = {
+  firstName: "John",
+  lastName : "Doe",
+  id       : 5566,
+  fullName : function() {
+    return this.firstName + " " + this.lastName; //this refers to person, it is equal to person.firstName and person.lastName
+   }
+  }
+  ```
 ### String
 ### Number
 ### Array
