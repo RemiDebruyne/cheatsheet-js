@@ -107,3 +107,43 @@
 ### String
 ### Number
 ### Array
+
+## Constructor and `new` operator
+When a function is executed with the `new` operator it does three things : 
+ - create an empty objects affected to `this`
+ - the body of the function is  executed, using `this` to add new property
+ - `this` is then returned
+In these operation `this` is replaced by the name of the function
+
+  ```js
+    function User(name) {
+      this.name = name;
+      this.isAdmin = false;
+    }
+
+    let user = new User("Jack");
+
+    alert(user.name); // Jack
+    alert(user.isAdmin); // false
+  ```
+
+Basically, it does :
+
+  ```js
+    function User(name) {
+      // this = {};  (implicitement) create an empty object `this` which is renamed with the named of the function, User in our case
+
+      // add the properties
+      this.name = name;
+      this.isAdmin = false;
+
+      // return this;  (implicitement), which is replaced with the name of the function
+    }
+
+    //this is equivalent to doing the following manually
+    let user = {
+      name: "Jack",
+      isAdmin: false
+    };
+  ```
+
